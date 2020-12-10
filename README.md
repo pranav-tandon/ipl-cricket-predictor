@@ -1,2 +1,2 @@
-# IPL PREDICTOR WITH 85% Accuracy
+# IPL Cricket Predictor
 
