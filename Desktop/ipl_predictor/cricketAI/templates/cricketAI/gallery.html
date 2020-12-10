@@ -1,0 +1,300 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cricket AI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Cricket AI "/>
+	<script type="application/x-javascript">
+
+
+		.imageContainer > img:hover {
+  width: 500px;
+  height: 200px;
+}
+	</script>
+	<link rel="stylesheet" href="{% static 'css/' %}">
+	<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'css/light-box.css' %}" rel="stylesheet">
+	<link href="{% static 'css/format.css' %}" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+	<div class="banner-1 jarallax" id="home">
+		<header>
+			<div class="container">
+				<div class="header-bottom-agileits">
+					<div class="w3-logo">
+						<h1><a href="{% url 'main2' %}">Cricket AI</a></h1>
+					</div>
+					<div class="address">
+						<p>University of Illinois at Urbana-Champaign</p>
+						<p class="para-y"><a href="{% url 'about' %}">Get more info</a></p>
+					</div>
+					<div class="nav-contact-w3ls">
+						<p>+1 475 441 0085</p>
+						<p class="para-y"><a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+		<!-- navigation -->
+	<div class="nav-bg">
+		<div class="container">
+			<nav class="navbar navbar-default shift">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					    aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="{% url 'main2' %}">Home</a></li>
+						<li><a href="{% url 'about' %}">About</a></li>
+						<li><a href="{% url 'main2' %}#serve">Predictions</a></li>
+						<li><a class="active" href="{% url 'gallery' %}">Gallery</a></li>
+</ul>
+
+				</div>
+			</nav>
+		</div>
+	</div>
+	</div>
+
+	<div class="gallery">
+		<div class="container">
+		<div class="wthree_head_section">
+				<h3 class="w3l_header">Our <span>Gallery</span></h3>
+				<p></p>
+			</div>
+			<div class="gallery-info">
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p1.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p1.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p2.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p2.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p3.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p3.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p4.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p4.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p5.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p5.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p6.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p6.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p7.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p7.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p8.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p8.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p9.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p9.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p10.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p10.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p11.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p11.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p12.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p12.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p13.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p13.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p14.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p14.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p15.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p15.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p16.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p16.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p17.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p17.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p18.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p18.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p19.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p19.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p20.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p20.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p26.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p26.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p22.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p22.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a></div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p23.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p23.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p21.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p21.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p24.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p24.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="col-md-3 gallery-grids">
+					<a href="{% static 'images/p25.jpeg' %}" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="{% static 'images/p25.jpeg' %}" alt="" class="img-responsive zoom-img">
+					</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+		</div>
+</div>
+<!--//gallery-->
+
+	<!-- footer -->
+	<div class="footer">
+	<div class="container">
+		<div class="f-bg-w3l">
+			<div class="col-md-4 w3layouts_footer_grid">
+						 <h2>Contact <span>Information</span></h2>
+						    <ul class="con_inner_text">
+								<li>909 South Fifth Street<label> I.L. - 61820, USA</label></li><li> <a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></li>
+<li> +1 4754410085</li>
+							</ul>
+
+						<ul class="social_agileinfo">
+</ul>
+					</div>
+
+				<div class="col-md-4 w3layouts_footer_grid">
+					<h3>Recent <span>Works</span></h3>
+					  <ul class="con_inner_text midimg">
+						<li><a href="#"><img src="{% static 'images/p1.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p2.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+  					    <li><a href="#"><img src="{% static 'images/p10.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+				     </ul>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			</div>
+			<p class="copyright">© 2019 Cricket AI. All Rights Reserved</p>
+	</div>
+	<!-- //footer -->
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- //smooth scrolling -->
+	<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/jarallax.js' %}"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //Owl-Carousel-JavaScript -->
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+
+
+	<!--js for bootstrap working-->
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+	<!-- //for bootstrap working -->
+</body>
+</html>

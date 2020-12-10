@@ -1,0 +1,8 @@
+django
+mpld3
+django-bootstrap-form
+numpy
+pandas
+scikit-learn
+matplotlib
+

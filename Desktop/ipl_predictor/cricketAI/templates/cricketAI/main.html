@@ -1,0 +1,583 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cricket AI | Home</title>
+	<!-- Meta Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Cricket AI">
+	<script type="application/x-javascript">
+
+	</script>
+
+
+	<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/flex-slider.css' %}" type="text/css" media="screen" property="" />
+	<link href="{% static 'css/format.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+	<style>
+	.col-container {
+		display: table; /* Make the container element behave like a table */
+		width: 100%; /* Set full-width to expand the whole page */
+	}
+
+	.xyz{
+  		display: block;
+	}
+
+	.col {
+		display: table-cell; /* Make elements inside the container behave like table cells */
+	}
+	</style>
+</head>
+
+<body>
+	<!-- banner -->
+	<div class="banner jarallax" id="home">
+		<header>
+			<div class="container">
+				<div class="header-bottom-agileits">
+					<div class="w3-logo">
+						<h1><a href="{% url 'main2' %}">Cricket AI</a></h1>
+					</div>
+					<div class="address">
+						<p>University of Illinois at Urbana-Champaign</p>
+						<p class="para-y"><a href="{% url 'about' %}">Get more info</a></p>
+					</div>
+					<div class="nav-contact-w3ls">
+						<p>+1 475 441 0085</p>
+						<p class="para-y"><a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></p>
+                        </div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+		<!-- navigation -->
+		<div class="nav-bg">
+			<div class="container">
+				<nav class="navbar navbar-default shift">
+					 <!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						    aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+
+				  </div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a class="active" href="{% url 'main2' %}">Home</a></li>
+							<li><a href="{% url 'about' %}">About</a></li>
+							<li><a href='#serve'>Predictions</a></li>
+							<li><a href="{% url 'gallery' %}">Gallery</a></li>
+	</ul>
+
+					</div>
+					<!-- /.navbar-collapse -->
+
+				</nav>
+			</div>
+		</div>
+	<!-- //navigation -->
+		<div class="containelighr">
+			<!-- header -->
+			<!-- //header -->
+			<div class="agileits_w3layouts_banner_info">
+				<section class="slider">
+						<div class="flexslider">
+							<ul class="slides">
+								<li>
+									<div class="banner-text-w3-agileits">
+										<h5>IPL 2019 </h5>
+										<h2>Prediction Service</h2>
+										<p>Predict match results and scores today</p>
+										<div class="botton">
+											<a href='#serve'>Start Predicting Now</a>
+										</div>
+									</div>
+								</li>
+								<li>
+										<div class="banner-text-w3-agileits">
+										<h5>Excited?</h5>
+										<h2>Support your team!</h2>
+										<p>Predict the match scorecard. Boost Around</p>
+										<div class="botton">
+											<a href='#serve'>Start Predicting Now</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="banner-text-w3-agileits">
+										<h5>Confused?</h5>
+										<h2>Choose your team</h2>
+										<p>Use Machine Learning to decide which team to choose.</p>
+										<div class="botton">
+											<a href='#serve'>Start Predicting Now</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="banner-text-w3-agileits">
+										<h5>Use Cricket AI Now</h5>
+										<h2>Stimulate</h2>
+										<p>Create real time situations and see who wins!</p>
+										<div class="botton">
+											<a href='#serve'>Start Predicting Now</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+
+	<div class="container">
+	  <div class="col area-right p1">
+		  <a class ="xyz" href={% url 'prematch' %}><h5>TOSS TIME! WINNER?</h5></a>
+	  	<p class="para-w3-agile">Get Hyped about having the basic probability based on teams and venues to predict winning probability of your team!</p>>
+	  </div>
+
+	  <div class="col area-right p2">
+		  <a class ="xyz" href={% url 'first_inn' %}><h5>TARGET, PLEASE?</h5></a>
+	  	<p class="para-w3-agile">Batting first? We got your team covered. Use the prediction service to know how much they should keep the target to potentially win. </p>
+	  </div>
+
+	 <div class="col area-right p3">
+		   <a class ="xyz" href={% url 'second_inn' %}><h5>SCORE MADE. CHASE?</h5></a>
+	  	<p class="para-w3-agile">Bowling team did the job? Want to know whether your batsmen will chase the total? Use this 2nd innings score estimator and win probability finder.</p>
+	  </div>
+	</div>
+	</div> </div>
+
+	<div class="wthree-mid jarallax">
+		<div class="container">
+			<h3>Indian Premier League</h3>
+<p></p>
+			<div class="botton">
+				<a href="http://www.iplt20.com/" target="_blank">Visit IPL's Ofiicial Website</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="w3ls-section wthree-pricing" id="pricing">
+		<div class="container">
+			<div class="wthree_head_section">
+				<h3 class="w3l_header">IPL TEAMS<span> 2020</span></h3>
+				<p>Auction is coming... We will keep up with the latest team as much as possible. Here is a list of current retained players.</p>
+			</div>
+			<div class="pricing-grids-info">
+								<div class="pricing-grid grid-one">
+									<div class="w3ls-top">
+										<h3>Delhi Capitals</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>Shreyas Iyer (c)</li>
+											<li>Rishabh Pant</li>
+											<li>Shikhar Dhawan</li>
+											<li>Ravichandran Ashwin</li>
+											<li>Ajinkya Rahane</li>
+											<li>Amit Mishra</li>
+											<li>Ishant Sharma</li>
+										</ul>
+										<div class="more">
+											<a href="http://www.delhicapitals.in/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="pricing-grid grid-one">
+									<div class="w3ls-top">
+										<h3>Mumbai Indians</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>Rohit Sharma (c)</li>
+											<li>Jasprit Bumrah</li>
+											<li>Kieron Pollard</li>
+											<li>Hardik Pandya</li>
+											<li>Quinton de Kock</li>
+											<li>Trent Boult</li>
+											<li>Lasith Malinga</li>
+										</ul>
+										<div class="more">
+											<a href="http://www.mumbaiindians.com/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="pricing-grid grid-two">
+									<div class="w3ls-top">
+										<h3>Rajasthan Royals</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>Steve Smith (c)</li>
+											<li>Ben Stokes</li>
+											<li>Jofra Archer</li>
+											<li>Jos Buttler</li>
+											<li>Sanju Samson</li>
+											<li>Shreyas Gopal</li>
+										</ul>
+										<div class="more">
+											<a href="https://www.rajasthanroyals.com/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="zb pricing-grid grid-four">
+									<div class="w3ls-top">
+										<h3>Kings XI Punjab</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>KL Rahul</li>
+											<li>Chris Gayle</li>
+											<li>Mayank Agarwal</li>
+											<li>Nichlas Pooran </li>
+											<li>Mujeeb ur Rahman </li>
+											<li>Mandeep Singh </li>
+											<li>Mohammed Shami </li>
+										</ul>
+										<!-- <h4> 800<span class="sup">$</span> </h4> -->
+										<div class="more">
+											<a href="https://www.kxip.in/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+				<!--End-slider-script-->
+			</div>
+		</div>
+	</div>
+
+
+	<div class="w3ls-section wthree-pricing" id="pricing">
+		<div class="container">
+			<div class="pricing-grids-info">
+
+
+				<div class="pricing-grid grid-one">
+					<div class="w3ls-top">
+						<h3>Chennai Super Kings</h3>
+					</div>
+					<div class="w3ls-bottom">
+						<ul class="count">
+							<li>M.S. Dhoni (c)</li>
+							<li>Imran Tahir</li>
+							<li>Dwayne Bravo</li>
+							<li>Suresh Raina</li>
+							<li>Shane Watson</li>
+							<li>Faf du Plessis</li>
+							<li>Harbhajan Singh</li>
+						</ul>
+						<div class="more">
+							<a href="https://www.chennaisuperkings.com/" target="_blank">View Website</a>
+						</div>
+					</div>
+				</div>
+
+								<div class="pricing-grid grid-two">
+									<div class="w3ls-top">
+										<h3>Kolkata Knight Riders</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>Dinesh Karthik (c)</li>
+											<li>Mitchell Starc</li>
+											<li>Sunil Narine</li>
+											<li>Andre Russell</li>
+											<li>Shubman Gill</li>
+											<li>Kuldeep Yadav</li>
+											<li>Nitish Rana</li>
+										</ul>
+										<div class="more">
+											<a href="http://www.kkr.in/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+								<div class="pricing-grid grid-three">
+									<div class="w3ls-top">
+										<h3>Sunrisers Hyderabad</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>David Warner (c)</li>
+											<li>Bhuvneshwar Kumar</li>
+											<li>Kane Williamson</li>
+											<li>Jonny Bairstow</li>
+											<li>Rashid Khan</li>
+											<li>Manish Pandey</li>
+											<li>Mohammed Nabi</li>
+										</ul>
+										<!-- <h4> 350<span class="sup">$</span> </h4> -->
+										<div class="more">
+											<a href="http://www.sunrisershyderabad.in/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="pricing-grid grid-four">
+									<div class="w3ls-top">
+										<h3>Royal Challengers Bangalore</h3>
+									</div>
+									<div class="w3ls-bottom">
+										<ul class="count">
+											<li>Virat Kohli (c)</li>
+											<li>A.B de Villiers</li>
+											<li>Moeen Ali</li>
+											<li>Yuzvendra Chahal </li>
+											<li>Parthiv Patel</li>
+											<li>Umesh Yadav</li>
+										</ul>
+										<!-- <h4> 500<span class="sup">$</span> </h4> -->
+										<div class="more">
+											<a href="https://www.royalchallengers.com/" target="_blank">View Website</a>
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+
+
+								<div class="clearfix"> </div>
+				<!--End-slider-script-->
+			</div>
+		</div>
+	</div>
+	<!--//pricing-->
+<!-- counter -->
+	<div class="services-bottom stats services jarallax">
+	<div class="banner-dott1">
+		<div class="container">
+		<div class="wthree_head_section">
+				<h3 class="w3l_header two">IPL <span>Statistics</span></h3>
+				<p class="tho">Excited </p>
+			</div>
+		  <div class="wthree-agile-counter">
+		  <div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">5164</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Number of Sixes Hit</h4>
+			</div>
+		</div>
+		<div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">263</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Highest Team Total</h4>
+			</div>
+		</div>
+		<div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">36</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Most Expensive Over</h4>
+			</div>
+		</div>
+		<div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">154</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Maximum Individual Wickets Taken</h4>
+			</div>
+		</div>
+			  <div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">5412</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Most Runs By an Individualr</h4>
+			</div>
+		</div>
+			  <div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">5412</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Most Wickets By an Individual</h4>
+			</div>
+		</div>
+			  <div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">175</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Highest Individual Score in an Innings</h4>
+			</div>
+		</div>
+			  <div class="col-md-3 w3_agile_stats_grid-top">
+			<div class="w3_agile_stats_grid">
+				<div class="agile_count_grid_left">
+				</div>
+				<div class="agile_count_grid_right">
+					<p class="counter">7</p>
+				</div>
+				<div class="clearfix"> </div>
+				<h4>Best Bowling Figures</h4>
+			</div>
+		</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</div>
+</div>
+
+	<div class="footer">
+	<div class="container">
+		<div class="f-bg-w3l">
+		<div class="col-md-4 w3layouts_footer_grid">
+					<h2>Contact <span>Information</span></h2>
+					    <ul class="con_inner_text">
+							<li>909 South Fifth Street<label> I.L - 61820, USA</label></li>
+							<li> <a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></li>
+							<li> +1 4754410085</li>
+						</ul>
+
+					<ul class="social_agileinfo">
+					</ul>
+				</div>
+				<div class="col-md-4 w3layouts_footer_grid">
+					<h3>Recent <span>Works</span></h3>
+					  <ul class="con_inner_text midimg">
+						<li><a href="#"><img src="{% static 'images/p1.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p2.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p10.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+				     </ul>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			</div>
+			<p class="copyright">© 2019 Cricket AI. All Rights Reserved</p>
+	</div>
+	<!-- //footer -->
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- //smooth scrolling -->
+	<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/jarallax.js' %}"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- flexSlider -->
+				<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+				<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				</script>
+  <!-- //flexSlider -->
+
+	<!-- Owl-Carousel-JavaScript -->
+	<script src="{% static 'js/owl.carousel.js' %}"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
+				items: 2,
+				lazyLoad: true,
+				autoPlay: false,
+				pagination: true,
+			});
+		});
+	</script>
+	<!-- //Owl-Carousel-JavaScript -->
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+
+	<!-- stats -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'js/jquery.countup.js' %}"></script>
+		<script>
+			$('.counter').countUp();
+		</script>
+<!-- //stats -->
+
+	<!--js for bootstrap working-->
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+	<!-- //for bootstrap working -->
+</body>
+</html>

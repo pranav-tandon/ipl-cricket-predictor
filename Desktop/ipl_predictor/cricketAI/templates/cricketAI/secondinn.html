@@ -1,0 +1,230 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load bootstrap %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cricket AI|Second Innings Result Predictor</title>
+	<!-- Meta Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Cricket AI " />
+	<script type="application/x-javascript">
+
+	</script>
+	<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'css/format.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+	<div class="banner-1 jarallax" id="home">
+		<header>
+			<div class="container">
+				<div class="header-bottom-agileits">
+					<div class="w3-logo">
+						<h1><a href="{% url 'main2' %}">Cricket AI</a></h1>
+					</div>
+					<div class="address">
+						<p>University of Illinois at Urbana-Champaign</p>
+						<p class="para-y"><a href="{% url 'about' %}">Get more info</a></p>
+					</div>
+					<div class="nav-contact-w3ls">
+						<p>+0 99788 44846</p>
+						<p class="para-y"><a href="mailto:info@example.com">info@example.com</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+	<div class="nav-bg">
+		<div class="container">
+			<nav class="navbar navbar-default shift">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					    aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="{% url 'main2' %}">Home</a></li>
+						<li><a class="active" href="{% url 'about' %}">About</a></li>
+						<li><a href="{% url 'mainpred' %}">Predictions</a></li>
+						<li><a href="{% url 'gallery' %}">Gallery</a></li>
+</ul>
+
+				</div>
+
+			</nav>
+		</div>
+	</div>
+	</div>
+
+<div class="about">
+	<div class="container">
+	<div class="wthree_head_section">
+				<h3 class="w3l_header">CHASE IT! <span> CAN THEY?</span></h3>
+				<p>Bowling team did the job? Want to know whether your batsmen will chase the total? Use this 2nd innings score estimator and win probability finder.
+				Exciting stuff? Want to start betting now? GOOOOO AHEAD AND ENJOY!</p>
+                 <p>Enter the first batting team in Team1</p>
+                 <p>Enter the second batting team in Team2</p>
+                 <p>Enter the venue where the match is being held</p>
+                 <p>Enter the number of runs scored by Team2 till that point</p>
+                 <p>Enter the number of overs played by Team2 till that point</p>
+                 <p>Enter the target set by Team1 for Team2</p>
+                 <p>Enter the number of wickets fallen of the batting team till that point</p>
+		</div>
+		{% if winner %}
+		<h2 class="text-center">Expected Winner : {{winner}}
+		<br> Winning Chances : {{probab}}
+		<br> Match expected to conclude in {{end}}th over <br>
+		{% if by_run %}
+			Expected to win by : {{by_run}} runs
+		{% endif %}
+		{% if by_wicket %}
+			Expected to win by : {{by_wicket}} wickets
+		{% endif %}
+		</h2>
+		{% endif %}
+		<div class="ab-agile">
+            <div style="padding: 0 0px;">
+                    <form action="" method="post" style="display: inline">
+                        {% csrf_token %}
+                        <div>
+                            {{form2|bootstrap}}
+                        </div>
+
+                        <input class="btn btn-success btn-block" type="submit" value="PREDICT THE RESULT AND BY HOW MANY
+                        RUNS/WICKETS DID THEY WIN!" />
+
+                    </form>
+                </div>
+		</div>
+	</div>
+</div>
+ <!-- //about -->
+<!-- wthree-mid -->
+	<div class="wthree-mid jarallax">
+		<div class="container">
+			<h3>IPL Chases</h3>
+			<p>IPL has always been full of very close encounters and nail biting last ball finshers and super overs.
+			The highest total ever chased is 217 runs.</p>
+		</div>
+	</div>
+
+<!-- //Team section -->
+
+	<!-- Modal1 -->
+	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>Cricket AI</h4>
+					<img src="{% static 'images/stat_.jpg' %}" alt=" " class="img-responsive">
+					<h5>Neque porro quisquam est qui dolorem </h5>
+					<p>Ut in ligula sollicitudin, auctor elit vel, mollis tortor. Nullam id magna in eros mollis porttitor vel et eros.Phasellus
+						sed iaculis nibh, non suscipit tortor. Aenean ante massa, lobortis et dolor eget, sollicitudin luctus arcu. Donec eros
+						tortor, ultrices in lectus quis, aliquet commodo lectus.Donec eros tortor, ultrices in lectus quis, aliquet commodo
+						lectus.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal1 -->
+	<!-- footer -->
+	<div class="footer">
+	<div class="container">
+		<div class="f-bg-w3l">
+			<div class="col-md-4 w3layouts_footer_grid">
+						<h2>Contact <span>Information</span></h2>
+						    <ul class="con_inner_text">
+								<li>909 South Fifth Street<label> I.L. - 61820, USA</label></li><li> <a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></li>
+<li> +1 4754410085</li>
+							</ul>
+
+						<ul class="social_agileinfo">
+</ul>
+					</div>
+
+				<div class="col-md-4 w3layouts_footer_grid">
+					<h3>Recent <span>Works</span></h3>
+					  <ul class="con_inner_text midimg">
+						<li><a href="#"><img src="{% static 'images/p1.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p2.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p10.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+				     </ul>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			</div>
+<p class="copyright">© 2019 Cricket AI. All Rights Reserved</p></div>
+	<!-- //footer -->
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- //smooth scrolling -->
+	<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/jarallax.js' %}"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //Owl-Carousel-JavaScript -->
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+
+
+	<!--js for bootstrap working-->
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+	<!-- //for bootstrap working -->
+</body>
+</html>

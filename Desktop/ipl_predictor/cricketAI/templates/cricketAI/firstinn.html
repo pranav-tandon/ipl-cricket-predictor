@@ -1,0 +1,206 @@
+{% load bootstrap %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cricket AI|Target Predictor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Cricket AI " />
+	<script type="application/x-javascript">
+
+	</script>
+	<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'css/format.css' %}" rel="stylesheet" type="text/css" media="all" />
+	</head>
+
+<body>
+	<div class="banner-1 jarallax" id="home">
+		<header>
+			<div class="container">
+				<div class="header-bottom-agileits">
+					<div class="w3-logo">
+						<h1><a href="{% url 'main2' %}">Cricket AI</a></h1>
+					</div>
+					<div class="address">
+						<p>University of Illinois at Urbana-Champaign</p>
+						<p class="para-y"><a href="{% url 'about' %}">Get more info</a></p>
+					</div>
+					<div class="nav-contact-w3ls">
+						<p>+1 475 441 0085</p>
+						<p class="para-y"><a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+	<div class="nav-bg">
+		<div class="container">
+			<nav class="navbar navbar-default shift">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					    aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="{% url 'main2' %}">Home</a></li>
+						<li><a class="active" href="{% url 'about' %}">About</a></li>
+						<li><a href="{% url 'mainpred' %}">Predictions</a></li>
+						<li><a href="{% url 'gallery' %}">Gallery</a></li>
+</ul>
+
+				</div>
+			</nav>
+		</div>
+	</div>
+	</div>
+	<!-- about -->
+<div class="about">
+	<div class="container">
+	<div class="wthree_head_section">
+				<h3 class="w3l_header">TARGET? <span> PREDICTION SAYS:</span></h3>
+				<p>We use the best machine learning technique for getting these results. We encode our normally looking data into a
+			language that our model understands - MATHEMATICS. Then, we use SUPER SMART ALGORITHMS to get the TARGET!!</p>
+                 <p>Enter the first batting team in Team1</p>
+                 <p>Enter the second batting team or bowling team in Team2</p>
+                 <p>Enter the venue where the match is being held</p>
+                 <p>Enter the number of runs scored by Team1 till that point</p>
+                 <p>Enter the number of overs played by Team1 till that point</p>
+                 <p>Enter the number of wickets fallen of the batting team till that point</p>
+				 <br>
+ 					{% if runs %}
+ 					<h2 class="text-center">Predicted Target for the Bowling Team :
+						{% if runs > 180 %}
+
+						<h1 class="text-center" style="color:red;">
+
+						{{runs}}
+
+						</h1>
+
+						{% else %}
+
+						<h1 class="text-center" style="color:blue;">
+
+						{{runs}}
+
+						</h1>
+						{% endif %}
+						</h2>
+ 					{% endif %}
+					<br>
+			</div>
+		<div class="ab-agile">
+            <div style="padding: 0 0px;">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div>
+                            {{form1|bootstrap}}
+                        </div>
+
+                        <input class="btn btn-success btn-block" type="submit" value="PREDICT TARGET SET BY Team1 FOR Team2" />
+
+                    </form>
+				<br>
+                </div>
+		</div>
+	</div>
+</div>
+ <!-- //about -->
+<!-- wthree-mid -->
+	<div class="wthree-mid jarallax">
+		<div class="container">
+			<h3>TARGET, PREDICTION SAYS?</h3>
+			<p></p>
+		</div>
+	</div>
+<!-- //Team section -->
+
+	<!-- Modal1 -->
+	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>Cricket AI</h4>
+					<img src="{% static 'images/stat_.jpg' %}" alt=" " class="img-responsive">
+					<h5></h5>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+	<div class="container">
+		<div class="f-bg-w3l">
+			<div class="col-md-4 w3layouts_footer_grid">
+						<h2>Contact <span>Information</span></h2>
+						    <ul class="con_inner_text">
+								<li>909 South Fifth Street<label> I.L. - 61820, USA</label></li><li> <a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></li>
+<li> +1 475 441 0085</li>
+							</ul>
+
+						<ul class="social_agileinfo">
+</ul>
+					</div>
+
+				<div class="col-md-4 w3layouts_footer_grid">
+					<h3>Recent <span>Works</span></h3>
+					  <ul class="con_inner_text midimg">
+						<li><a href="#"><img src="{% static 'images/p1.jpeg' %}" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p2.jpeg' %}" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p10.jpeg' %}" alt="" class="img-responsive" /></a></li>
+				     </ul>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			</div>
+<p class="copyright">© 2019 Cricket AI. All Rights Reserved</p></div>
+
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+	<script src="{% static 'js/jarallax.js' %}"></script>
+	<script type="text/javascript">
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

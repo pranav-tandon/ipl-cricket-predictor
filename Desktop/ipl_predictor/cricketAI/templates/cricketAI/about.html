@@ -1,0 +1,163 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cricket AI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Cricket AI - Gauransh Dhruv Tandon, IPL Predictor" />
+	<script type="application/x-javascript">
+
+	</script>
+	<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'css/format.css' %}" rel="stylesheet" type="text/css" media="all" />
+	</head>
+
+<body>
+	<div class="banner-1 jarallax" id="home">
+		<header>
+			<div class="container">
+				<div class="header-bottom-agileits">
+					<div class="w3-logo">
+						<h1><a href="{% url 'main2' %}">Cricket AI</a></h1>
+					</div>
+					<div class="address">
+						<p>University of Illinois at Urbana-Champaign</p>
+						<p class="para-y"><a href="{% url 'about' %}">Get more info</a></p>
+					</div>
+					<div class="nav-contact-w3ls">
+						<p>+1 475 441 0085</p>
+						<p class="para-y"><a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</header>
+
+	<div class="nav-bg">
+		<div class="container">
+			<nav class="navbar navbar-default shift">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					    aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="{% url 'main2' %}">Home</a></li>
+						<li><a class="active" href="{% url 'about' %}">About</a></li>
+						<li><a href="{% url 'mainpred' %}">Predictions</a></li>
+						<li><a href="{% url 'gallery' %}">Gallery</a></li>
+</ul>
+
+				</div>
+			</nav>
+		</div>
+	</div>
+	</div>
+	<!-- about -->
+<div class="about">
+	<div class="container">
+	<div class="wthree_head_section">
+				<h3 class="w3l_header">About <span>Us</span></h3>
+				<p>This web-app is created for CS 242 Final Project.
+<br><br>Extracted data from https://cricsheet.org/ and csv files; processed those csv files to produce clean innings wise data.
+					<br><br>Thereby, used these clean files to generate Machine Learning model using Python APIs like scikit-learn, numpy and pandas.
+					<br><br>Finally, used Django framework to deploy machine learning models to make predictions.</p>
+			</div>
+</div>
+<!-- //about -->
+	<div class="wthree-mid jarallax">
+		<div class="container">
+			<h3>Cricket AI - IPL Predictor</h3>
+			<p></p>
+		</div>
+	</div>
+
+<section class="team" >
+	<div class="container">
+		<div class="wthree_head_section">
+				<h3 class="w3l_header"> <span>Team</span></h3>
+				<p></p>
+			</div>
+		<div class="team-grid-top">
+			<div class="col-md-4 team1">
+				<div class="inner-team1">
+				<img src="{% static 'images/profile_picture.jpg' %}" alt="" />
+				<h3>Gauransh Dhruv Tandon</h3>
+					<div class="team-social"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+
+	</div>
+</section>
+
+	<div class="footer">
+	<div class="container">
+		<div class="f-bg-w3l">
+			<div class="col-md-4 w3layouts_footer_grid">
+						<h2>Contact <span>Information</span></h2>
+						    <ul class="con_inner_text">
+								<li>909 South Fifth Street<label> I.L. - 61820, USA</label></li><li> <a href="mailto:gtandon2@illinois.edu">gtandon2@illinois.edu</a></li>
+<li> +1 4754410085</li>
+							</ul>
+
+						<ul class="social_agileinfo">
+						</ul>
+					</div>
+
+				<div class="col-md-4 w3layouts_footer_grid">
+					<h3>Recent <span>Works</span></h3>
+					  <ul class="con_inner_text midimg">
+						<li><a href="#"><img src="{% static 'images/p1.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p2.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+						<li><a href="#"><img src="{% static 'images/p10.jpeg' %}" alt="" class="img-responsive imageContainer" /></a></li>
+				     </ul>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			</div>
+<p class="copyright">© 2019 Cricket AI. All Rights Reserved</p></div>
+	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<script type='text/javascript' src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+	<script src="{% static 'js/jarallax.js' %}"></script>
+	<script type="text/javascript">
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
